@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickNotes</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-content">
+        <p class="eyebrow">QUICKNOTES</p>
+        <h1>A place for your thoughts.</h1>
+        <p class="tagline">Small notes, clear mind.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="composer" aria-labelledby="add-heading">
+        <h2 id="add-heading">Add a note</h2>
+        <form id="note-form">
+          <div class="form-field">
+            <label for="note-input">Your note</label>
+            <input id="note-input" name="text" type="text" placeholder="Write something to remember..." />
+          </div>
+          <div class="form-field">
+            <label for="note-category">Category</label>
+            <select id="note-category" name="category">
+              <option value="personal">Personal</option>
+              <option value="work">Work</option>
+              <option value="study">Study</option>
+            </select>
+          </div>
+          <button type="submit">Add Note</button>
+        </form>
+        <p id="error-message" class="error-message" role="alert"></p>
+      </section>
+
+      <section class="notes-section" aria-labelledby="notes-heading">
+        <div class="notes-heading">
+          <h2 id="notes-heading">Your notes</h2>
+          <p id="note-count">You have no notes yet.</p>
+        </div>
+        <label class="search-label" for="search-input">Search notes</label>
+        <input id="search-input" type="search" placeholder="Find a note..." />
+        <ul id="notes-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>QuickNotes · Keep what matters.</p>
+    </footer>
+  </body>
+</html>
