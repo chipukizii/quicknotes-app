@@ -148,6 +148,26 @@ select:focus-visible {
   margin: 0;
 }
 
+.notes-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.clear-all {
+  min-height: auto;
+  padding: 0.35rem 0.6rem;
+  color: #a33b45;
+  background: transparent;
+  border-color: var(--border);
+  font-size: 0.85rem;
+}
+
+.clear-all:hover {
+  color: #812a33;
+  background: #fff0f0;
+}
+
 .search-label {
   display: block;
   margin-bottom: 0.4rem;
@@ -159,6 +179,12 @@ select:focus-visible {
   margin: 1rem 0 0;
   padding: 0;
   list-style: none;
+}
+
+.empty-message {
+  padding: 1rem;
+  color: var(--muted);
+  text-align: center;
 }
 
 .note-card {
@@ -231,5 +257,10 @@ footer p {
     align-items: flex-start;
     flex-direction: column;
     gap: 0.35rem;
+  }
+
+  .notes-actions {
+    width: 100%;
+    justify-content: space-between;
   }
 }
